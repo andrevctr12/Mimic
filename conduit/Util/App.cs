@@ -1,4 +1,5 @@
 ﻿using System;
+using AppKit;
 
 namespace Conduit
 {
@@ -26,6 +27,11 @@ namespace Conduit
         public void onStateChange()
         {
             view.onStateChange?.Invoke();
+        }
+
+        public static void close()
+        {
+            NSApplication.SharedApplication.Terminate(NSApplication.SharedApplication);
         }
 
         /**

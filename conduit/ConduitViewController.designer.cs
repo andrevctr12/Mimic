@@ -15,6 +15,9 @@ namespace Conduit
 		[Outlet]
 		AppKit.NSView containerView { get; set; }
 
+		[Action ("clickCloseButton:")]
+		partial void clickCloseButton (Foundation.NSObject sender);
+
 		[Action ("clickDiscordButton:")]
 		partial void clickDiscordButton (Foundation.NSObject sender);
 

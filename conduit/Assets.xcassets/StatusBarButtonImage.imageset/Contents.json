@@ -4,11 +4,12 @@
       "idiom": "universal"
     },
     {
+      "filename": "c-logopng-c-png-c-png-234_250.png",
       "scale": "1x",
       "idiom": "universal"
     },
     {
-      "filename": "mimic.png",
+      "filename": "c-logopng-c-png-c-png-234_250-1.png",
       "scale": "2x",
       "idiom": "universal"
     },
@@ -70,10 +71,12 @@
       "idiom": "mac"
     },
     {
+      "filename": "c-logopng-c-png-c-png-234_250-2.png",
       "scale": "1x",
       "idiom": "mac"
     },
     {
+      "filename": "c-logopng-c-png-c-png-234_250-3.png",
       "scale": "2x",
       "idiom": "mac"
     },
@@ -91,6 +94,7 @@
   ],
   "info": {
     "version": 1,
-    "author": "xcode"
+    "author": "xcode",
+    "template-rendering-intent": "template"
   }
 }

@@ -718,17 +718,6 @@
                                     <action selector="clickGithubButton:" target="XfG-lQ-9wD" id="d2Q-CB-slv"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-Kq-Qwb">
-                                <rect key="frame" x="337" y="193" width="39" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="x" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="PMd-h3-wCq">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="clickCloseButton:" target="XfG-lQ-9wD" id="JgI-gD-zK6"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>

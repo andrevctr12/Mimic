@@ -69,5 +69,10 @@ namespace Conduit
             Process.Start("https://github.com/molenzwiebel/mimic");
         }
 
+        partial void clickCloseButton(NSObject sender)
+        {
+            App.close();
+        }
+
     }
 }

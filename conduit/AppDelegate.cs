@@ -20,8 +20,19 @@ namespace Conduit
             var button = statusItem.Button;
             if (button != null) {
                 button.Image = NSImage.ImageNamed("StatusBarButtonImage");
+                button.Image.Size = new CoreGraphics.CGSize(16.0, 16.0);
+                this.statusItem.HighlightMode = true;
+                button.Image.Template = true;
                 button.Action = new ObjCRuntime.Selector("togglePopover:");
             }
+
+            //NSImage* statusImage = [NSImage imageNamed: NSImageNameActionTemplate];
+            //statusImage.size = NSMakeSize(18.0, 18.0);
+            //self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSSquareStatusItemLength];
+            //self.statusItem.image = statusImage;
+            //self.statusItem.highlightMode = YES;
+            //self.statusItem.enabled = YES;
+            //self.statusItem.menu = self.statusMenu;
 
             popover.ContentViewController = ConduitViewController.freshController();
             this.showPopover(this);
