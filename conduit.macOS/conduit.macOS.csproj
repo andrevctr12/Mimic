@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60EEFD6D-A135-4276-81D6-D2D710881CF5}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>conduit.macOS</RootNamespace>
+    <AssemblyName>Conduit</AssemblyName>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <AOTMode>None</AOTMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <LinkMode>None</LinkMode>
+    <AOTMode>None</AOTMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+    <Reference Include="websocket-sharp">
+      <HintPath>packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>packages\QRCoder.1.3.6\lib\netstandard2.0\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>packages\RestSharp.106.6.10\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="conduit.macOS.csproj" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="EventMonitor.cs" />
+    <Compile Include="Util\ConnectionManager.cs" />
+    <Compile Include="Util\CryptoHelpers.cs" />
+    <Compile Include="Util\DebugLogger.cs" />
+    <Compile Include="Util\HubConnectionHandler.cs" />
+    <Compile Include="Util\LeagueConnection.cs" />
+    <Compile Include="Util\LeagueUtils.cs" />
+    <Compile Include="Util\MobileConnectionHandler.cs" />
+    <Compile Include="Util\Persistence.cs" />
+    <Compile Include="Util\SimpleJson.cs" />
+    <Compile Include="View\OpenLeagueView.cs" />
+    <Compile Include="View\QRCodeView.cs" />
+    <Compile Include="View\ConduitView.cs" />
+    <Compile Include="View\QRCodeView.designer.cs" />
+    <Compile Include="View\ConduitView.designer.cs" />
+    <Compile Include="View\OpenLeagueView.designer.cs" />
+    <Compile Include="Controller\ConduitViewController.cs" />
+    <Compile Include="Controller\ConduitViewController.designer.cs" />
+    <Compile Include="Controller\OpenLeagueViewController.cs" />
+    <Compile Include="Controller\OpenLeagueViewController.designer.cs" />
+    <Compile Include="Controller\QRCodeViewController.cs" />
+    <Compile Include="Controller\QRCodeViewController.designer.cs" />
+    <Compile Include="Controller\ViewController.cs" />
+    <Compile Include="Controller\ViewController.designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\CloseImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CloseImage.imageset\close-button.png" />
+    <ImageAsset Include="Assets.xcassets\StatusBarButtonImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StatusBarButtonImage.imageset\c-logopng-c-png-c-png-234_250-1.png" />
+    <ImageAsset Include="Assets.xcassets\GitHubImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\GitHubImage.imageset\GitHub-Mark-Light-120px-plus.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\mimic-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LoLImage.imageset\LoL.png" />
+    <ImageAsset Include="Assets.xcassets\LoLImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\DiscordImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\DiscordImage.imageset\Discord-Logo-Color.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+</Project>
