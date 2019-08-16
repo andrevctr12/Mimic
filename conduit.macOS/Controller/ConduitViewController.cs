@@ -43,7 +43,7 @@ namespace Conduit
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            
+
         }
 
         private void changeContainerView()
@@ -56,7 +56,7 @@ namespace Conduit
             var storyboard = NSStoryboard.FromName("Main", null);
 
             return storyboard.InstantiateControllerWithIdentifier("ConduitViewController") as ConduitViewController;
-            
+
         }
 
         partial void clickDiscordButton(NSObject sender)
@@ -73,6 +73,20 @@ namespace Conduit
         {
             App.close();
         }
+
+        partial void clickActionButton(NSObject sender)
+        {
+            var currEvent = NSApplication.SharedApplication.CurrentEvent;
+            if(currEvent != null)
+            {
+                NSMenu.PopUpContextMenu(configurationMenu, currEvent, this.View);
+            }
+        }
+
+        //partial void clickUpdateButton(NSObject sender)
+        //{
+        //    Sparkle.SUUpdater.r
+        //}
 
     }
 }

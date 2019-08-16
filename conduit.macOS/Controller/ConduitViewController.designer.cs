@@ -13,7 +13,16 @@ namespace Conduit
 	partial class ConduitViewController
 	{
 		[Outlet]
+		AppKit.NSButton configurationButton { get; set; }
+
+		[Outlet]
+		AppKit.NSMenu configurationMenu { get; set; }
+
+		[Outlet]
 		AppKit.NSView containerView { get; set; }
+
+		[Action ("clickActionButton:")]
+		partial void clickActionButton (Foundation.NSObject sender);
 
 		[Action ("clickCloseButton:")]
 		partial void clickCloseButton (Foundation.NSObject sender);
@@ -23,9 +32,22 @@ namespace Conduit
 
 		[Action ("clickGithubButton:")]
 		partial void clickGithubButton (Foundation.NSObject sender);
+
+		[Action ("clickUpdateButton:")]
+		partial void clickUpdateButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (configurationButton != null) {
+				configurationButton.Dispose ();
+				configurationButton = null;
+			}
+
+			if (configurationMenu != null) {
+				configurationMenu.Dispose ();
+				configurationMenu = null;
+			}
+
 			if (containerView != null) {
 				containerView.Dispose ();
 				containerView = null;

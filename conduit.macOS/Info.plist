@@ -2,32 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleName</key>
-	<string>conduit.macOS</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.molenzwiebel.conduit-macOS</string>
-	<key>CFBundleShortVersionString</key>
-	<string>2.2.1</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.10</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.molenzwiebel.conduit-macOS</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Conduit</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.2.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>${AuthorCopyright:HtmlEncode}</string>
-	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
-	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
+	<key>CFBundleVersion</key>
+	<string>2.2.2</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.10</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>${AuthorCopyright:HtmlEncode}</string>
+	<key>NSMainStoryboardFile</key>
+	<string>Main</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://conduit-macos.herokuapp.com/Mimic/appcast.xml</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>

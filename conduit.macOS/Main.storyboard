@@ -678,14 +678,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-tq-Nwm">
-                                <rect key="frame" x="350" y="180" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="lsY-HG-waF">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAN-ZR-i6L">
                                 <rect key="frame" x="0.0" y="50" width="380" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -714,24 +706,46 @@
                                     <action selector="clickGithubButton:" target="XfG-lQ-9wD" id="d2Q-CB-slv"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-FL-zuc">
-                                <rect key="frame" x="348" y="198" width="20" height="20"/>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lU-L4-pg5">
+                                <rect key="frame" x="350" y="197" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="CloseImage" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ZlV-xl-p8z">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSActionTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2Ac-re-628">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="contentTintColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
-                                    <action selector="clickCloseButton:" target="XfG-lQ-9wD" id="YvD-aW-Izp"/>
+                                    <action selector="clickActionButton:" target="XfG-lQ-9wD" id="N2P-o2-dqi"/>
+                                    <outlet property="menu" destination="ImP-WA-qpP" id="hae-Fi-XMg"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="configurationButton" destination="7lU-L4-pg5" id="OJH-lP-960"/>
+                        <outlet property="configurationMenu" destination="ImP-WA-qpP" id="OD1-Lt-FCc"/>
                         <outlet property="containerView" destination="ZAN-ZR-i6L" id="U23-8u-hIu"/>
                     </connections>
                 </viewController>
+                <menu title="Configurations" id="ImP-WA-qpP">
+                    <items>
+                        <menuItem title="Check for Updates..." id="K4z-SY-aOI">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="clickUpdateButton:" target="XfG-lQ-9wD" id="3mz-19-bXD"/>
+                                <binding destination="TVE-OX-S8s" name="argument" keyPath="checkForUpdates:" id="TeA-wJ-1fW"/>
+                                <binding destination="TVE-OX-S8s" name="enabled" keyPath="automaticallyChecksForUpdates" id="tJZ-rK-8RH"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Exit" id="YPJ-E8-gu5">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="clickCloseButton:" target="XfG-lQ-9wD" id="VUv-CP-SVW"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+                <customObject id="TVE-OX-S8s" customClass="SUUpdater"/>
             </objects>
             <point key="canvasLocation" x="156" y="638"/>
         </scene>
@@ -779,7 +793,7 @@
                 </viewController>
                 <customObject id="p3H-O5-1AJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="625"/>
+            <point key="canvasLocation" x="658" y="628"/>
         </scene>
         <!--Open League View Controller-->
         <scene sceneID="8yz-yg-tbK">
@@ -828,9 +842,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CloseImage" width="256" height="256"/>
         <image name="DiscordImage" width="245" height="240"/>
         <image name="GitHubImage" width="60" height="60"/>
         <image name="LoLImage" width="256" height="256"/>
+        <image name="NSActionTemplate" width="14" height="14"/>
     </resources>
 </document>

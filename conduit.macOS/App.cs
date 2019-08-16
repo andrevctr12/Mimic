@@ -6,6 +6,7 @@ namespace Conduit
     public class App
     {
         public static string APP_NAME = "Mimic Conduit";
+        // dis
         public static string VERSION = "2.2.0";
 
         public static string HUB_WS = "wss://rift.mimic.lol/conduit";
@@ -63,5 +64,6 @@ namespace Conduit
 
             DebugLogger.Global.WriteMessage($"Notification: " + text);
         }
+
     }
 }

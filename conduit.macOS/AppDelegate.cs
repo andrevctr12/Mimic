@@ -93,5 +93,11 @@ namespace Conduit
 //            eventMonitor.start();
         }
 
+        public void checkUpdate()
+        {
+           // Sparkle.SUUpdater.
+        }
+
+
     }
 }
