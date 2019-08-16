@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "conduit.macOS", "conduit.macOS.csproj", "{60EEFD6D-A135-4276-81D6-D2D710881CF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparkle", "SparkleSharp\Sparkle\Sparkle.csproj", "{5B22F6E9-3675-42B5-9CAA-090BA39A5407}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparkle", "Util\SparkleSharp\Sparkle.csproj", "{5B22F6E9-3675-42B5-9CAA-090BA39A5407}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

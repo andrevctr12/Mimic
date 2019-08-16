@@ -83,10 +83,13 @@ namespace Conduit
             }
         }
 
-        //partial void clickUpdateButton(NSObject sender)
-        //{
-        //    Sparkle.SUUpdater.r
-        //}
+        partial void clickUpdateButton(NSObject sender)
+        {
+            Sparkle.SUUpdater.SharedUpdater.CheckForUpdates(sender);
+            
+            var appDelegate = NSApplication.SharedApplication.Delegate as AppDelegate;
+            appDelegate.togglePopover(sender);
 
+        }
     }
 }
