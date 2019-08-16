@@ -124,7 +124,7 @@
     <ImageAsset Include="Assets.xcassets\DiscordImage.imageset\Discord-Logo-Color.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="SparkleSharp\Sparkle\Sparkle.csproj">
+    <ProjectReference Include="Util\SparkleSharp\Sparkle.csproj">
       <Project>{5B22F6E9-3675-42B5-9CAA-090BA39A5407}</Project>
       <Name>Sparkle</Name>
     </ProjectReference>
