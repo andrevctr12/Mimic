@@ -36,5 +36,7 @@
 	<string>https://conduit-macos.herokuapp.com/Mimic/appcast.xml</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 </dict>
 </plist>

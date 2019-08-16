@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Assets.xcassets\Contents.json" />
+    <BundleResource Include="Resources\dsa_pub.pem" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\CloseImage.imageset\Contents.json" />
